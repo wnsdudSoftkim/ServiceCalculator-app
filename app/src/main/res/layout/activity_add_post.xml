@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context=".AddPost">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_keyboard_return_black_24dp" />
+
+        <ImageView
+            android:id="@+id/btn_upload"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="270dp"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_send_black_24dp" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_weight="7"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:background="@drawable/none"
+                    android:textCursorDrawable="@drawable/cursor"
+
+                    android:layout_marginLeft="10dp"
+                    android:hint="제목" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#000"
+                />
+            <LinearLayout
+                android:layout_weight="93"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:weightSum="100"
+                android:layout_height="0dp">
+
+                <EditText
+                    android:id="@+id/Edit_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="94"
+                    android:background="@drawable/none"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:layout_marginLeft="10dp"
+                    android:hint="내용을 입력하세요" />
+                <ImageView
+                    android:id="@+id/image_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:padding="2dp"
+                    android:weightSum="100"
+                    >
+                    <ImageView
+                        android:id="@+id/btn_gallary"
+                        android:layout_weight="25"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_photo_black_24dp"/>
+                    <ImageView
+                        android:id="@+id/btn_file"
+                        android:layout_weight="25"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_attach_file_black_24dp"/>
+                    <LinearLayout
+                        android:layout_weight="50"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowPost">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_showpost_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="asadasd"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/text_showpost_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="decription"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/image_showpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu_foreground" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
