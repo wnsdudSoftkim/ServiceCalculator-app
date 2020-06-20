@@ -27,7 +27,7 @@ class AddPost : AppCompatActivity() {
     private var filePath: Uri? = null
     private var mStorageRef: StorageReference? = null
     private  val viewModel : DayViewModel by viewModels()
-    val user = FirebaseAuth.getInstance().currentUser
+
     var filename :String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {

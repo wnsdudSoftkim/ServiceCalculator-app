@@ -1,5 +1,6 @@
 package com.junyoung.day
 
+import android.media.Image
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,7 +11,9 @@ class DayViewModel : ViewModel() {
     private var db = FirebaseFirestore.getInstance()
     var data = ArrayList<FireData>()
     val Livedata = MutableLiveData<ArrayList<FireData>>()
+    val Livedata2 = MutableLiveData<ArrayList<ImageData>>()
     val user = FirebaseAuth.getInstance().currentUser
+    val data2 = ArrayList<ImageData>()
 
     fun getData() {
         //지금 여기 데이터는 한번만 읽는 데이터임 RealTime 으로 불러들이고 싶음
@@ -54,12 +57,37 @@ class DayViewModel : ViewModel() {
                     totalserve = value!!["ToTal"].toString(),
                     hasserve = value!!["HasServe"].toString(),
                     leftserve = value!!["LeftServe"].toString(),
-                    progressbar = value!!["ProgressBar"].toString()
+                    progressbar = value!!["ProgressBar"].toString(),
+                    nickname = value!!["NickName"].toString(),
+                    myname = value!!["Myname"].toString()
                 )
                 data.add(firedata)
                 Livedata.value = data
 
             }
+    }
+    fun getImageData() {
+        db.collection(user!!.uid)
+            .document("Image")
+            .addSnapshotListener { value, e ->
+                if (e != null) {
+                    return@addSnapshotListener
+                }
+                val imagedata :ImageData= ImageData(
+                    imagedata = value!!["ImageName"].toString()
+                )
+                data2.add(imagedata)
+                Livedata2.value = data2
+
+            }
+    }
+    fun addImageData(item:ImageData) {
+        val hashdata = hashMapOf(
+            "ImageName" to item.imagedata
+        )
+        db.collection(user!!.uid)
+            .document("Image")
+            .set(hashdata)
     }
 
     fun addData(item: FireData) {

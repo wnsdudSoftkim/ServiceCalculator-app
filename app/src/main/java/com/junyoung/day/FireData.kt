@@ -13,5 +13,6 @@ class FireData(
     val progressbar : String?="0",
     val myname:String?=null,
     val imagename:String?=null
+
 ):Serializable {}
 
