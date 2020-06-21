@@ -23,11 +23,15 @@
 
         </activity>
         <activity android:name=".Login2" />
-        <activity android:name=".SignUp" />
+        <activity android:name=".SignUp" >
+
+        </activity>
         <activity android:name=".MenuFragmentTab" />
         <activity android:name=".PersonFragmentTab" />
         <activity android:name=".HomeFragmentTab" />
-        <activity android:name=".Home">
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".MainActivity">

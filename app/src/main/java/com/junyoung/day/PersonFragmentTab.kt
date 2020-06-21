@@ -112,7 +112,6 @@ class PersonFragmentTab : Fragment() {
             text_myname.setText(viewModel.Livedata.value!![0].myname)
 
 
-
         })
         btn_aaa.setOnClickListener {
             showday()
@@ -129,7 +128,7 @@ class PersonFragmentTab : Fragment() {
         if (requestCode == 0 && resultCode == AppCompatActivity.RESULT_OK) {
             filePath = data?.getData()
             try {
-               uploadfile()
+                uploadfile()
 
 
             } catch (e: IOException) {
@@ -214,7 +213,6 @@ class PersonFragmentTab : Fragment() {
             //저장하기 클릭후 홈화면으로 이동.
 
 
-
         }
 
 
@@ -264,10 +262,9 @@ class PersonFragmentTab : Fragment() {
                     Toast.makeText(activity, "업로드 완료!", Toast.LENGTH_SHORT).show()
                     val adddata = ImageData(imagedata = filename)
                     viewModel.addImageData(adddata)
-                    val intent = Intent(activity,Home::class.java)
+                    val intent = Intent(activity, Home::class.java)
 
                     startActivity(intent)
-
 
 
                 })

@@ -35,7 +35,7 @@ class ShowPost : AppCompatActivity() {
 
 
         val title = intent.getStringExtra("title")
-        Toast.makeText(this,title,Toast.LENGTH_LONG).show()
+
         val description = intent.getStringExtra("description")
         val imagename = intent.getStringExtra("imagename")
 

@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         android:gravity="center"
-        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
@@ -21,29 +22,26 @@
             android:gravity="center"
             android:text="전역일 계산기"
             android:textColor="#ffffff"
-            android:textSize="64dp"
-            />
+            android:textSize="64dp" />
 
         <TextView
-            android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:text="내 전역날은 언제지?"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/aa"
-            />
-        <Button
-            android:id="@+id/main_btn"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="Click"
-            android:background="#000000"
+            android:gravity="center"
+            android:text="내 전역날은 언제지?"
             android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/imageview_like_progress"
+            android:layout_marginTop="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_rotate_right_white_24dp" />
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

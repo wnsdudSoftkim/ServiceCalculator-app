@@ -24,12 +24,8 @@ class Home : AppCompatActivity() {
         initViewPager()
         auth = FirebaseAuth.getInstance()
 
-        btn_open.setOnClickListener {
-            drawer_layout.openDrawer(drawer)
-        }
-        btn_close.setOnClickListener {
-            drawer_layout.closeDrawers()
-        }
+
+
         btn_logout.setOnClickListener {
             auth.signOut()
             if (auth.currentUser == null) {
@@ -51,8 +47,8 @@ class Home : AppCompatActivity() {
             "내 정보" -> {
                 tabView.tab_logo.setImageResource(R.mipmap.person)
             }
-            "목록" -> {
-                tabView.tab_logo.setImageResource(R.mipmap.folder)
+            "커뮤니티" -> {
+                tabView.tab_logo.setImageResource(R.drawable.ic_people_black_24dp)
             }
             else -> return tabView
         }
@@ -73,10 +69,11 @@ class Home : AppCompatActivity() {
 
         tabLayout.getTabAt(0)?.setCustomView(createView("홈"))
         tabLayout.getTabAt(1)?.setCustomView(createView("내 정보"))
-        tabLayout.getTabAt(2)?.setCustomView(createView("목록"))
+        tabLayout.getTabAt(2)?.setCustomView(createView("커뮤니티"))
 
 
     }
+
 
 
 }

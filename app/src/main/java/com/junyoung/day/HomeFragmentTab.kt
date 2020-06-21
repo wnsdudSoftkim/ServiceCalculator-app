@@ -1,6 +1,7 @@
 package com.junyoung.day
 
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
@@ -22,6 +23,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_add_post.*
 import kotlinx.android.synthetic.main.activity_home_fragment_tab.*
+import kotlinx.coroutines.delay
 
 
 import java.util.*
@@ -49,6 +51,9 @@ class HomeFragmentTab : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        btn_addPost.setOnClickListener {
+            startActivity(Intent(activity,AddPost::class.java))
+        }
 
 
 
@@ -61,27 +66,34 @@ class HomeFragmentTab : Fragment() {
             text_left_serve2.setText(viewModel.Livedata.value!![0].leftserve)
             text_progressbar2.setText(viewModel.Livedata.value!![0].progressbar)
             text_nickname2.setText(viewModel.Livedata.value!![0].nickname)
-            progressBar2.setProgress(viewModel.Livedata.value!![0].progressbar!!.toInt())
             text_myname2.setText(viewModel.Livedata.value!![0].myname)
+            val pro = viewModel.Livedata.value!![0].progressbar!!.toInt()
+            progressBar2.setProgress(pro)
+
+
 
         })
         viewModel.Livedata2.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             val path = pathReference.child(viewModel.Livedata2.value!![0].imagedata.toString())
-            //Glide는 이미지를 업데이트 하는 기능이 없기 대문에 지워주고 다시 refresh 해준다
+                Glide.with(this)
+                    .load(path)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                    .skipMemoryCache(true)
+                    .into(image_home)
 
-            Glide.with(this)
-                .load(path)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .skipMemoryCache(true)
-                .into(image_home)
-            Toast.makeText(activity,""+user!!.uid,Toast.LENGTH_LONG).show()
+
+
+
+
 
 
         })
 
 
+    }
 
-
+    fun delay(a: Int) {
+        delay(a)
     }
 
 

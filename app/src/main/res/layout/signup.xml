@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:textColorHint="#000"
                         android:textColor="#000"
-                        android:hint="아이디를 입력하세요" />
+                        android:hint="이메일형식의 아이디를 입력하세요" />
 
                     <EditText
                         android:id="@+id/signup_password"
@@ -61,15 +61,8 @@
                         android:layout_marginTop="20dp"
                         android:textColorHint="#000"
                         android:textColor="#000"
-                        android:hint="비밀번호를 입력하세요" />
-                    <EditText
-                        android:id="@+id/signup_password2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:textColorHint="#000"
-                        android:textColor="#000"
-                        android:hint="이름을 입력해주세요" />
+                        android:hint="비밀번호 6자리 이상을 입력하세요" />
+
 
                     <Button
                         android:id="@+id/signup_btn"

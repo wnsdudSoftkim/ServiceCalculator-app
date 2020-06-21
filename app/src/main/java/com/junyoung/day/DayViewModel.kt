@@ -126,9 +126,10 @@ class DayViewModel : ViewModel() {
             "ToTal" to "0",
             "HasServe" to "0",
             "LeftServe" to "0",
-            "NickName" to "0",
+            "NickName" to "군인",
             "ProgressBar" to "0",
             "Myname" to "아무개"
+
         )
         db.collection(user!!.uid)
             .document("Serve")

@@ -25,7 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_menu_fragment_tab.*
 import kotlinx.android.synthetic.main.menudata.*
 import kotlinx.android.synthetic.main.menudata.view.*
-import kotlinx.android.synthetic.main.menudata.view.btn_delete
+
 
 class MenuFragmentTab : Fragment() {
 
@@ -98,12 +98,11 @@ class RecycleAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView
 
-        val delete: ImageView
+
 
         init {
             title = itemView.findViewById(R.id.data_title)
 
-            delete = itemView.findViewById(R.id.btn_delete)
         }
     }
 
@@ -127,9 +126,6 @@ class RecycleAdapter(
 
         holder.title.setOnClickListener {
             getShowPost.invoke(item)
-        }
-        holder.delete.setOnClickListener {
-            onClickDelete.invoke(item)
         }
 
 

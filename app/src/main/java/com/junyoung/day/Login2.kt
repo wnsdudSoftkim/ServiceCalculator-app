@@ -65,7 +65,7 @@ class Login2 : AppCompatActivity() {
             Toast.makeText(this, "홈 화면으로 이동합니다.", Toast.LENGTH_LONG).show()
             startActivity(Intent(this, Home::class.java))
         } else {
-            Toast.makeText(this, "?????"+account, Toast.LENGTH_SHORT).show()
+
         }
     }
 

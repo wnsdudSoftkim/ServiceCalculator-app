@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.activity_home_fragment_tab.*
 import kotlinx.android.synthetic.main.signup.*
 
 class SignUp : AppCompatActivity() {
@@ -42,13 +43,14 @@ class SignUp : AppCompatActivity() {
     fun signup() {
         val signupEmail = findViewById<EditText>(R.id.signup_email).text.toString()
         val signupPassword = findViewById<EditText>(R.id.signup_password).text.toString()
-        val signupPassword2 = findViewById<EditText>(R.id.signup_password2).text.toString()
+
 
         auth.createUserWithEmailAndPassword(signupEmail, signupPassword)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     viewModel.addDataCalenderInit()
+
                     val user = auth.currentUser
                     updateUI(user)
 
