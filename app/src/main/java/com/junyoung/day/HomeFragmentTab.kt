@@ -51,6 +51,7 @@ class HomeFragmentTab : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         btn_addPost.setOnClickListener {
             startActivity(Intent(activity,AddPost::class.java))
         }

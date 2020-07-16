@@ -263,7 +263,6 @@ class PersonFragmentTab : Fragment() {
                     val adddata = ImageData(imagedata = filename)
                     viewModel.addImageData(adddata)
                     val intent = Intent(activity, Home::class.java)
-
                     startActivity(intent)
 
 
