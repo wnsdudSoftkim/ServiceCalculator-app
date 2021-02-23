@@ -21,6 +21,8 @@ https://play.google.com/store/apps/details?id=com.junyoung.day
   <img src="https://user-images.githubusercontent.com/48875061/85221920-a894c100-b3f2-11ea-9f22-4788af634eb7.jpg" width="33%"/>
   <img src="https://user-images.githubusercontent.com/48875061/85221923-aa5e8480-b3f2-11ea-858a-a291a3d9b46e.jpg" width="66%"/>
 </div>
+## Tutorial
+https://github.com/wnsdudSoftkim/Learning-Android/issues
 
 ## 설치방법
 -구글 플레이 스토어 접속 후 "내 전역날은 언제지?" 검색합니다.
